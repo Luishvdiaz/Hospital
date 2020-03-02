@@ -1,0 +1,40 @@
+
+<div class="container-fluid p-4">
+    <h3>Productos de recetas a surtir</h3>
+    <div class="row">
+        <div class="table table-sm"> 
+                                            <div class="table-body table-responsive-sm">
+                                            <table class="table table-bordered table-hover btn-lg table-striped table-condensed" >
+                                                <br>
+                                                <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="row">Receta</th>
+                                                    <th scope="row">ID Producto</th>
+                                                    <th>Producto</th>
+                                                    <th>En inventario</th>
+                                                    <th>A surtir</th>
+                                                    <th>Opciones</th>
+                                                </tr>
+                                                </thead>
+                                                
+
+                                                <tbody>
+                                                    {{#each p1}}
+
+                                                    <tr>
+                                                        <td scope="row">{{receta}}</td>
+                                                        <td scope="row">{{id_producto}}</td>
+                                                        <td>{{nombre_producto}}</td>
+                                                        <td>{{cantidad_i}}</td>
+                                                        <td>{{cantidad}}</td>
+                                                        <td><a href="/links/surtir/{{receta}},{{id_producto}},{{cantidad}}" class="btn btn-info"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Surtir</a></td>
+                                                    </tr> 
+                                                    {{/each}}
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div>
+                                        
+                                    </div> 
+    </div>
+</div>

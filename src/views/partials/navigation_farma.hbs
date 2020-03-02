@@ -1,0 +1,54 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(86, 61, 124);">
+    <a class="navbar-brand">
+      <img src="../img/medicine.png" atl="">
+    </a>
+    <a class="text-light navbar-brand" href="/"><b>Hospital</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    
+    <ul class="navbar-nav mr-auto">
+      {{#if user}} 
+              <li class="nav-item dropdown">
+              <a href="/links" class="text-light nav-link"><a href="/links" class="nav-link"><img src="../img/medicine(1).png"/> <b class="text-light">Productos</b></a>
+            </li>
+            <li class="nav-item">
+              <a href="/profile" class="text-light nav-link"><a href="/profile" class="nav-link"><img src="../img/user(1).png"/> <b class="text-light">Perfil {{user.username}}</b></a>
+            </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a  class="text-light nav-link"><a  class="nav-link"> <b><p class="text-light">Bienvenido/a: {{user.fullname}}</p></b></a>
+              </li>
+            <li class="nav-item">
+              <a href="/logout" class="text-light nav-link"><a href="/logout" class="nav-link"><img src="../img/logout.png"/> <b class="text-light">Cerrar sesión</b></a>
+            </li>
+            
+            {{!-- <ul class="navbar-nav ml-auto"> --}}
+              
+            </ul>
+      {{else}}
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a href="/signup" class="nav-link"><img src="../img/users.png"/> <b>Registrarse</b> </a>
+      </li>
+      <li class="nav-item">
+        {{!-- <a class="navbar-brand">
+          <img src="../img/login.png" href="/signup" atl="">
+        </a> --}}
+          <a href="/signin" class="nav-link"><img src="../img/log-in.png"/> <b>Iniciar Sesión</b></a>
+          
+        
+      </li>
+      {{/if}}
+      
+    </ul>
+    
+    
+  </div>
+</nav>
+{{!-- <body style="overflow-x:hidden; overflow-y:hidden"> --}}
+  

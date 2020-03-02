@@ -1,0 +1,92 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container p-3">
+  <div class="row">
+    <div class="col-md-2">
+        <br>
+
+        <a href="/pacientes" class="btn btn-primary btn-lg"> <i class="fa fa-mail-reply" aria-hidden="true"></i> Pacientes </a>
+    </div>
+    <div class="col-md-8 mx-auto">
+    <div >
+        <div class="card-body">
+            <h3>  Añadir paciente</h3><br>
+                            <form action="/pacientes/add" method="POST">
+                                <div class="form-group">
+                                    <h5>Nombre</h5>
+                                    <input text="text" class="form-control btn-lg" name="nombrep"  required="true"  maxlength="100" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Número de seguro</h5>
+                                    <input type="text" class="form-control btn-lg" name="no_seguro" placeholder="12345678" required="true" maxlength="9">
+                                </div>
+                                <div class="form-group">
+                                    <h5>Estatura</h5>
+                                    <input text="number" class="form-control btn-lg" name="estatura" placeholder="mts" required="true">
+                                </div>
+                                <div class="form-group">
+                                    <h5>Peso</h5>
+                                    <input text="number" class="form-control btn-lg" name="peso" placeholder="Kg" required="true">
+                                </div>
+                                <div class="form-group">
+                                    <h5>Edad</h5>
+                                    <input text="number" class="form-control btn-lg" name="edad"  required="true">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <h5>Género</h5>
+                                    {{!-- <input text="number" class="form-control btn-lg" name="genero"  required="true"> --}}
+                                    {{!-- <h5>Tipo de sangre</h5> --}}
+                                    {{!-- <input text="text" class="form-control btn-lg" name="tipo_sangre" placeholder="O+, A-, AB+ ..." required="true" maxlength="2"> --}}
+                                    <p class="text-left"></p>
+                                    <select class="custom-select" name="genero" id="genero" required="true">
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Tipo de sangre</h5>
+                                    {{!-- <input text="text" class="form-control btn-lg" name="tipo_sangre" placeholder="O+, A-, AB+ ..." required="true" maxlength="2"> --}}
+                                    <p class="text-left"></p>
+                                    <select class="custom-select" name="tipo" id="tipo" required="true">
+                                        <option value="O +">O +</option>
+                                        <option value="O -">O -</option>
+                                        <option value="A +">A +</option>
+                                        <option value="A -">A -</option>
+                                        <option value="B +">B +</option>
+                                        <option value="B -">B -</option>
+                                        <option value="AB +">AB +</option>
+                                        <option value="AB -">AB -</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Fecha de nacimiento</h5>
+                                    <input text="date" type="date" class="form-control btn-lg" name="fecha_nacimiento"  required="true">
+                                </div>
+                                <div class="form-group">
+                                    <h5>Alergias</h5>
+                                    <input text="text" class="form-control btn-lg" name="alergias"  required="true" maxlength="255">
+                                </div>
+
+                                <div class="form-group">
+                                    <h5>Padecimeintos</h5>
+                                    <textarea class="form-control rounded-0" name="padecimientos"  rows="3" maxlength="255" required="true"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Número de contacto</h5>
+                                    <input text="text" class="form-control btn-lg" name="no_contacto" placeholder="348-123-4567" required="true" maxlength="12">
+                                </div>
+                                <div class="form-group">
+                                    <h3>Diagnóstico (opcional)</h3>
+                                    <textarea text="text" class="form-control btn-lg" name="diagnostico"  rows="3" maxlength="255"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-success btn-block btn-lg">Guardar paciente</button>
+                                </div>
+                    </form>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>

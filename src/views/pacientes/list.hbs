@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container-fluid">
+    <br><h3>Pacientes</h3>
+<a href="/pacientes/add" class="btn btn-primary btn-lg"> <i class="fa fa-plus" aria-hidden="true"></i> Añadir paciente </a>
+<br>
+    <divclass="row">
+        {{#each pacientes}}
+            <div>
+                <div>
+                    
+                    <div class="table">
+                        
+                        <div  class="table-responsive">
+                            
+                        <table class="table table-bordered table-hover btn-lg table-striped mb-0 table-sm" width="100%" >
+                            {{!-- <table id="dtDynamicVerticalScrollExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%"> --}}
+                            <br>
+                            <thead>
+                            <tr>
+                                <th>Número</th>
+                                <th>Nombre</th> 
+                                <th># de seguro</th>
+                                <th>Estatura</th>
+                                <th>Peso</th>
+                                <th>Edad</th>
+                                <th>Género</th>
+                                <th>Tipo de sangre</th>
+                                <th>Fecha de nacimiento</th>
+                                <th>Alergias</th>
+                                <th>Padecimientos</th>
+                                <th>Número de contacto</th>
+                                <th>Paciente de</th>
+                                <th>Opciones</th>
+                            </tr>
+                            </thead>
+                            
+
+                            <tbody>
+                                
+
+                                <tr>
+                                <td>{{id_paciente}}</td>
+                                <td>{{nombrep}}</td>
+                                <td>{{no_seguro}}</td>
+                                <td>{{estatura}}</td>
+                                <td>{{peso}}</td>
+                                <td>{{edad}}</td>
+                                <td>{{genero}}</td>
+                                <td>{{tipo_sangre}}</td>
+                                <td>{{fecha_nacimiento}}</td>
+                                <td>{{alergias}}</td>
+                                <td>{{padecimientos}}</td>
+                                <td>{{no_contacto}}</td>
+                                <td>{{nombre}}</td>
+                                <td> 
+                                    <a href="/pacientes/cita/{{id_paciente}}" class="btn btn-primary btn-sm"> <i class="fa fa-folder" aria-hidden="true"></i> Agendar cita </a>
+                                    <a href="/pacientes/historial/{{id_paciente}}" class="btn btn-dark btn-sm"> <i class="fa fa-folder" aria-hidden="true"></i> Expediente </a>
+                                    <a href="/pacientes/delete/{{id_paciente}}" class="btn btn-danger btn-sm"><i class="fa fa-remove" aria-hidden="true"></i> Eliminar </a>
+                                    <a href="/pacientes/edit/{{id_paciente}}" class="btn btn-info btn-sm"> <i class="fa fa-pencil" aria-hidden="true"></i> Editar </a>
+                                    
+                                </td>
+                                </tr>
+                                {{!-- {{/each}} --}}
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            {{else}}
+            <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>Aún no se han guardado pacientes, o no cuenta con los permisos requeridos</p>
+                {{!-- <a href="/links/add">Create One!</a> --}}
+            </div>
+        </div>
+        {{/each}}
+        
+    </div>
+</div>
+{{!-- </body> --}}

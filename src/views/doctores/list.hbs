@@ -1,0 +1,41 @@
+
+<div class="container-fluid p-4">
+    <h3>Doctores</h3>
+    
+    <a href="/doctores/add" class="btn btn-primary btn-lg"> <i class="fa fa-plus" aria-hidden="true"></i> Añadir doctor </a>         <a href="/horario/" class="btn btn-info btn-lg"> <i class="fa fa-mail-forward" aria-hidden="true"></i> Horarios doctores </a>
+    <br><br>
+    <div class="row">
+        
+        {{#each doc}}
+        <div class="col-md-2">
+            <div class="card text-center">
+                <div class="card-body" style="background: rgb(136, 177, 243); ">
+                        <h3 class="card-title text-uppercase">
+                            {{Nombre}}
+                        </h3>
+                        <p class="m-2"><b>ID:</b> {{id_doctor}}</p>
+                        <p class="m-2"><b>Nombre:</b> {{nombre}}</p>
+                        <p class="m-2"><b>Cédula:</b> {{cedula}}</p>
+                        <p class="m-2"><b>Especialidad:</b> {{especialidad}}</p>
+                        <p class="m-2"><b>Teléfono:</b> {{telefono}}</p>
+                        <p class="m-2"><b>E-mail:</b> {{email}}</p>
+                        <p class="m-2"><b>Dirección:</b> {{direccion}}</p>
+                        <p class="m-2"><b>Ciudad:</b> {{ciudad}}</p>
+                        <p class="m-2"><b>Horario:</b> {{dia}} <b>de</b> {{entrada}} <b>a</b> {{salida}}</p>
+
+                        {{!-- <a href="/doctores/cita/:{{id_doctor}}" class="btn btn-primary"> <i class="fa fa-folder" aria-hidden="true"></i> Agendar cita </a> --}}
+                        <a href="/doctores/delete/:{{id_doctor}}" class="btn btn-danger"><i class="fa fa-remove" aria-hidden="true"></i> Eliminar</a>
+                        <a href="/doctores/edit/{{id_doctor}}" class="btn btn-secondary"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>Aún no se han guardado doctores</p>
+                {{!-- <a href="/links/add">Create One!</a> --}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

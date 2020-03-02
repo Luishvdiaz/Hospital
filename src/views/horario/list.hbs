@@ -1,0 +1,71 @@
+<div class="container p-10">
+    <br><h3>Horarios</h3>
+    <a href="/doctores/" class="btn btn-info btn-lg"> <i class="fa fa-mail-reply" aria-hidden="true"></i> Doctores </a>
+<a href="/horario/add" class="btn btn-primary btn-lg"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Agregar horario </a>
+
+<br>
+    <divclass="row">
+        
+            <div>
+                <div>
+                    
+                    <div class="table">
+                        
+                        <div class="table-body">
+                            
+                        <table class="table table-bordered table-hover btn-lg table-striped" >
+                            <br>
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Dia (s)</th>
+                                <th>Hora de entrada</th>
+                                <th>Hora de salida</th>
+                                <th>Opciones</th>
+                            </tr>
+                            </thead>
+                            
+
+                            <tbody>
+                                {{#each horarios}}
+
+                                <tr>
+                                <td>{{id_horario}}</td>
+                                <td>{{dia}}</td>
+                                <td>{{entrada}}</td>
+                                <td>{{salida}}</td>
+                                <td>
+                                     
+                                    <a href="/horario/delete/{{id_horario}}" class="btn btn-danger"><i class="fa fa-remove" aria-hidden="true"></i> Eliminar</a>
+                                    
+
+                                    <a href="/horario/edit/{{id_horario}}" class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a>
+                                    
+                                </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+{{!--             
+            {{else}}
+            
+            <div class="col-md-4 mx-auto">
+                <br>
+                <br>
+                <br>
+                <br>
+                <div>
+                    <p>Aún no se han guardado productos</p>
+                    <a href="/links/add"> Guarda aquí </a>
+                </div>
+            </div> --}}
+        
+        
+    </div>
+</div>

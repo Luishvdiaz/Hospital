@@ -1,0 +1,42 @@
+
+<div class="container-fluid p-4">
+    <h3>Citas</h3>
+    
+    {{!-- <a href="/citas/add" class="btn btn-primary btn-lg"> <i class="fa fa-plus" aria-hidden="true"></i> Añadir cita </a> --}}
+    <br><br>
+    <div class="row">
+        
+        {{#each citas}}
+        <div class="col-md-2">
+            <div class="card text text-white border-dark bg-dark mb-3">
+                <div class="card-header text-center bg-transparent border-dark"><h4><b>Cita #{{id_cita}}</b></h4></div>
+                <div class="card-body" style="background: rgb(39, 68, 114);">
+                        <h3 class="card-title text-uppercase">
+                            {{Nombre}}
+                        </h3>
+                    </a>
+                    <h5>
+                        {{!-- <p class="m-2"><b>Número:</b> {{id_cita}}</p> --}}
+                        <p class="m-2"><b>Doctor:</b> {{nombre}}</p>
+                        <p class="m-2"><b>Paciente:</b> {{nombrep}}</p>
+                        <p class="m-2"><b>Tratamiento a realizar:</b> {{tratamiento}}</p>
+                        <p class="m-2"><b>Fecha:</b> {{fecha}} </p> <p class="m-2"><b>Hora:</b> {{hora}} </p><br>
+
+
+                        <a href="/citas/delete/:{{id_cita}}" class="btn btn-danger"><i class="fa fa-remove" aria-hidden="true"></i> Eliminar</a>
+                        
+                        {{!-- <a href="/citas/edit/:{{id_cita}}" class="btn btn-secondary"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a> --}}
+                    </h5>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>Aún no se han guardado citas, o no cuenta con los permisos requeridos</p>
+                {{!-- <a href="/links/add">Create One!</a> --}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

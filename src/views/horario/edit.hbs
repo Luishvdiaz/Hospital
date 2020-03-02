@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container p-3">
+  <div class="row">
+    <div class="col-md-2">
+        <br>
+
+        <a href="/horario" class="btn btn-primary btn-lg"> <i class="fa fa-mail-reply" aria-hidden="true"></i> Horarios </a>
+    </div>
+    <div class="col-md-8 mx-auto">
+    <div >
+        <div class="card-body">
+            <h3>  Añadir horario</h3><br>
+                            <form action="/horario/edit/:{{horario.id_horario}}" method="POST">
+                                <div class="form-group">
+                                    <h5>Días</h5>
+                                    <input text="text" value="{{horario.dia}}" class="form-control btn-lg" name="dia"  required="true" placeholder="Días laborales" maxlength="58" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Hora de entrada</h5>
+                                    <input type="text" value="{{horario.entrada}}" class="form-control btn-lg" name="entrada" placeholder="Entrada (7:00 am)" required="true" maxlength="7">
+                                </div>
+                                <div class="form-group">
+                                    <h5>Hora de salida</h5>
+                                    <input text="number" value="{{horario.salida}}" class="form-control btn-lg" name="salida" placeholder="Salida (6:00 pm)" maxlength="7"required="true">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-success btn-block btn-lg">Guardar horario</button>
+                                </div>
+                    </form>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>

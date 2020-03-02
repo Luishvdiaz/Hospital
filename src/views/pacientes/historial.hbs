@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container-fluid">
+    <br>
+<a href="/pacientes" class="btn btn-primary btn-lg"> <i class="fa fa-mail-reply" aria-hidden="true"></i> Pacientes </a>
+<br>
+    <divclass="row">
+            <div> 
+                <div>
+                    <div class="table">
+                        <div class="table-body">
+                            {{#each nombre_vista}}
+                            <br>
+                                <h3>Paciente: {{nombrep}}</h3>
+                            {{/each}}
+                        <table class="table table-bordered table-hover btn-lg table-striped">
+                            <br>
+                            <thead>
+                            <tr>
+                                <th>Número</th>
+                                <th>Fecha/Hora</th>
+                                <th>Comentarios</th>
+                                <th>Diagnóstico</th>
+                                <th>Opciones</th>
+                                
+                            </tr>
+                            </thead>
+                            
+
+                            <tbody>
+                                {{#each link}}
+
+                                <tr>
+                                <td>{{id_historial_paciente}}</td>
+                                <td>{{fecha}}</td>
+                                <td>{{comentarios}}</td>
+                                <td>{{diagnostico}}</td>
+                                <td> 
+                                    <a href="/pacientes/edit/{{id_historial_paciente}}" class="btn btn-info"> <i class="fa fa-pencil" aria-hidden="true"></i> Editar diagnóstico</a>
+                                    
+                                </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+{{!--             
+            {{else}}
+            
+            <div class="col-md-4 mx-auto">
+                <br>
+                <br>
+                <br>
+                <br>
+                <div>
+                    <p>Aún no se han guardado productos</p>
+                    <a href="/links/add"> Guarda aquí </a>
+                </div>
+            </div> --}}
+        
+        
+    </div>
+</div>

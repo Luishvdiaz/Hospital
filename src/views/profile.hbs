@@ -1,0 +1,20 @@
+
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>Bienvenido {{user.fullname}}</h3>
+                    <h4>Nickname: {{user.username}}</h4>
+                    <h4>Permisos concedidos de {{user.tipo}}</h4>
+                     
+                    {{!-- <h4>Permisos concedidos de {{#switch user.tipo}} 
+                        {{#case '1'}} doctor {{/case}} 
+                        {{#case '2'}} farmacéutico {{/case}} 
+                        {{#case '3'}} gerente {{/case}} 
+                    {{/switch}}</h4> --}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

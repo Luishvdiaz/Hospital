@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container p-3">
+  <div class="row">
+    <div class="col-md-2">
+        <br>
+
+        <a href="/citas" class="btn btn-primary btn-lg"> <i class="fa fa-mail-reply" aria-hidden="true"></i> Citas </a>
+    </div>
+    <div class="col-md-8 mx-auto">
+    <div >
+        <div class="card-body">
+            <h3>  Añadir cita</h3><br>
+                            <form action="/doctores/cita" method="POST">
+                                <div class="form-group">
+                                    <h5>Doctor</h5>
+                                    {{#each doctores}}
+                                        <input text="text" id="doctor-input" class="form-control btn-lg" name="doctor" required="true" value="{{id_doctor}} : {{nombre}}" readonly>
+                                    {{/each}} 
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <br><h5>Paciente</h5>
+                                    <select class="custom-select my-1 mr-sm-2" name="paciente" id="inlineFormCustomSelectPref">
+                                        {{#each pacientes}}
+                                            <option value="{{id_paciente}}">{{nombrep}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <br><h5>Tratamiento</h5>
+                                    <textarea text="text" class="form-control btn-lg" name="tratamiento"  rows="3" maxlength="255" required="true"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <br><h5>Fecha y hora de la cita</h5>
+                                    <br><h6>Fecha</h6>
+                                    <input text="date" type="date" class="form-control btn-lg" name="fecha"  required="true">
+                                    <br><h6>Hora</h6>
+                                    <input text="time" type="time" class="form-control btn-lg" name="hora"  required="true">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-success btn-block btn-lg">Guardar cita</button>
+                                </div>
+                    </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>

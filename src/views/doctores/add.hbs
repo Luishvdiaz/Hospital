@@ -1,0 +1,101 @@
+<div class="container p-3">
+    <div class="col-md-9 mx-auto">
+    <div >
+        <div class="card-body">
+            <h3>  Añadir doctores</h3>
+                            <form action="/doctores/add" method="POST">
+                                <div class="form-group">
+                                    <h5>Nombre</h5>
+                                    <input text="text" class="form-control btn-lg" name="nombre" placeholder="Nombre" required="true" autofocus><br>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Cédula</h5>
+                                    <input text="text" class="form-control btn-lg" name="cedula" placeholder="Cédula" required="true" maxlength="8"><br>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Especialidad</h5>
+                                    <input text="text" class="form-control btn-lg" name="especialidad" placeholder="Especialidad" required="true"><br>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Teléfono</h5>
+                                    <input text="text" class="form-control btn-lg" name="telefono" placeholder="Teléfono" required="true" maxlength="12"><br>
+                                </div>
+                                <div class="form-group">
+                                    <h5>E-mail</h5>
+                                    <input text="text" class="form-control btn-lg" name="email" placeholder="E-mail" required="true"><br>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Dirección</h5>
+                                    <input text="text" class="form-control btn-lg" name="direccion" placeholder="Dirección" required="true"><br>
+                                </div>
+                                <div class="form-group">
+                                    <h5>Ciudad</h5>
+                                    <input text="text" class="form-control btn-lg" name="ciudad" placeholder="Ciudad" required="true"><br>
+                                </div>
+                                <hr size="20" />
+                                <div>
+                                    <h3>Horarios</h3><br><a href="/horario/" target="_blank" class="btn btn-info btn-sm"> 
+                                    
+                                    <i target="_blank" class="fa fa-mail-forward" aria-hidden="true" ></i>Horarios doctores</a>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-hover btn-lg table-striped mb-0 table-sm" width="100%" >
+                                                <br>
+                                                    <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Dia (s)</th>
+                                                        <th>Hora de entrada</th>
+                                                        <th>Hora de salida</th>
+                                                    </tr>
+                                                    </thead>
+                                                    
+
+                                                    <tbody>
+                                                        {{#each horarios}}
+
+                                                        <tr>
+                                                        <td>{{id_horario}}</td>
+                                                        <td>{{dia}}</td>
+                                                        <td>{{entrada}}</td>
+                                                        <td>{{salida}}</td>
+
+                                                        {{/each}}
+                                                    </tbody>
+                                            </table>
+
+                                        </div><br><h4>Seleccionar horario del doctor</h4><br>
+                                        {{!-- <div class="btn-group btn-group-toggle" data-toggle="buttons"> --}}
+                                            
+                                            {{!-- <label class="btn btn-secondary active">
+                                                <input type="radio" name="default" id="default" autocomplete="off" checked> 1
+                                            </label> --}}
+                                            {{!-- <div class="form-group">
+                                                <h5>Número: </h5>
+                                                <input text="text" class="form-control btn-lg" name="number" placeholder="ID" required="true" maxlength="3">
+                                            </div> --}}
+                                            <div class="form-group">
+                                                <h5>ID: </h5>
+                                                <select class="custom-select my-1 mr-sm-2" name="number" id="number" required="true">
+                                                    {{#each horarios}}
+                                                    <option value="{{id_horario}}">{{id_horario}}: {{dia}}, de {{entrada}} a {{salida}}.</option>
+                                                    {{/each}}
+                                                </select> 
+                                            </div>
+                                            {{!-- {{#each horarios}}
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="opcion_{{id_horario}}"  autocomplete="off"> {{id_horario}}
+                                            </label>
+                                            {{/each}} --}}
+                                            {{!-- </div> --}}
+                                </div>
+                                <hr size="20" />
+                                <div class="form-group">
+                                    <button class="btn btn-success btn-block btn-lg">Guardar doctor</button>
+                                </div>
+                    </form>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>

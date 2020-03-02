@@ -1,0 +1,40 @@
+
+<div class="container-fluid p-5">
+    <h3>Recetas</h3>
+    
+    <a href="/recetas/add" class="btn btn-primary btn-lg"> <i class="fa fa-plus" aria-hidden="true"></i> Añadir Receta </a>
+    <br><br>
+    <div class="row">
+        {{#each recetas}}
+        <div class="col-md-3">
+            <div class="card text text-black border-dark bg-dark mb-3" style="background: rgb(116, 116, 116);">
+                <div class="card-header text-light text-center bg-transparent border-dark font-size: 18px;" ><b><h4>Receta #{{id_receta}}</h4></b></div>
+                <div class="card-body" style="background: rgb(176, 178, 182);" >
+                        <h3 class="card-title text-uppercase">
+                            {{Nombre}}
+                        </h3>
+                    </a>
+                    <h5>
+                        {{!-- <p class="m-2"><b>Número:</b> {{id_receta}}</p> --}}
+                        <p class="m-2"><b>Paciente:</b> {{nombrep}}</p>
+                        <p class="m-2"><b>Doctor:</b> {{nombre}}</p> 
+                        {{#each recetas_productos}}
+                            <p class="m-2"><b>Productos recetados:</b> {{nombre_producto}}</p>
+                        {{/each}}
+                        <p class="m-2"><b>Fecha de expedición:</b> {{fecha_hora}} </p>
+                        <a href="/recetas/delete/:{{id_receta}}" class="btn btn-danger"><i class="fa fa-remove" aria-hidden="true"></i> Eliminar</a>
+                        <a href="/recetas/reporte/:{{id_receta}}" class="btn btn-info"><i class="fa fa-print" aria-hidden="true"></i> Imprimir</a>
+                    </h5>
+                </div> 
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center"> 
+                <p>Aún no se han guardado recetas, o no cuenta con los permisos requeridos</p>
+                {{!-- <a href="/links/add">Create One!</a> --}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

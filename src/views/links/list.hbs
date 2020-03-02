@@ -1,0 +1,106 @@
+
+{{!-- <div class="container p-5">
+    <form class="form-inline my-2 my-lg-0">
+        
+        <input class="form-control mr-sm-2" type="search" placeholder="Nombre" aria-label="Search">
+        {{!-- <button href="/links/search/{{nombre}}" class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button> --}}
+        {{!-- <a href="/{{nombre}}" class="btn btn-info"><i class="fa fa-search" aria-hidden="true"></i> Buscar</a>
+    </form>
+</div> --}}
+
+<div class="container p-5">
+<a href="/links/add" class="btn btn-primary btn-lg"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Añadir productos </a> <br>
+<br><a href="/links/surtir" class="btn btn-success btn-lg"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Surtir productos de receta </a> <br>
+{{!-- <br>
+  <form class="form-inline" action="/links/search/:nombre" method="POST">
+    <input class="form-control mr-sm-2" type="search" placeholder="Nombre" aria-label="Search" name="nombre">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+  </form> --}}
+{{!-- <div class="col-md-5">
+    <form action="/links/add" method="POST">
+        <div class="input-group">
+        <div class="input-group-prepend">
+            <br><span class="input-group-text btn btn-info" id="">Buscar producto</span>
+        </div>
+            <input type="text" name="nombre_producto_buscar" class="form-control">
+        </div>
+    </form>
+</div> --}}
+<br>
+{{!-- <div class="col-md-5">
+    <form action="/links/search" method="POST">
+        <div class="input-group">
+            {{!-- {{#each links_buscar}} --}}
+            {{!-- <input type="text" name="nombre_producto_buscar" class="form-control" required="true" autofocus >
+            <a href="/links/search/" class="btn btn-secondary"><i class="fa fa-search" aria-hidden="true"></i> Buscar</a> --}}
+            {{!-- {{/each}} --}}
+        {{!-- </div>
+    </form>
+</div> --}}
+    <divclass="row">
+        
+            <div>
+                <div>
+                    
+                    <div class="table">
+                        
+                        <div class="table-body">
+                            
+                        <table class="table table-bordered table-hover btn-lg table-striped" >
+                            <br>
+                            <thead>
+                            <tr>
+                                {{!-- <th>Número</th> --}}
+                                <th>Nombre</th>
+                                <th>Cantidad</th>
+                                <th>Tipo</th>
+                                <th>Tamaño</th>
+                                <th>Opciones</th>
+                            </tr>
+                            </thead>
+                            
+
+                            <tbody>
+                                {{#each links}}
+
+                                <tr>
+                                {{!-- <td>{{id_producto}}</td> --}}
+                                <td>{{nombre_producto}}</td>
+                                <td>{{cantidad}}</td>
+                                <td>{{tipo}}</td>
+                                <td>{{tamano}}</td>
+                                <td>
+                                    
+                                    <a href="/links/delete/{{id_producto}}" class="btn btn-danger"><i class="fa fa-remove" aria-hidden="true"></i> Eliminar</a>
+                                    
+
+                                    <a href="/links/edit/{{id_producto}}" class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a>
+                                    
+                                </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+{{!--             
+            {{else}}
+            
+            <div class="col-md-4 mx-auto">
+                <br>
+                <br>
+                <br>
+                <br>
+                <div>
+                    <p>Aún no se han guardado productos</p>
+                    <a href="/links/add"> Guarda aquí </a>
+                </div>
+            </div> --}}
+        
+        
+    </div>
+</div>

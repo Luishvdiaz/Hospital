@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container p-3">
+  <div class="row">
+    <div class="col-md-2">
+        <br>
+        <a href="/pacientes" class="btn btn-primary btn-lg"> <i class="fa fa-mail-reply" aria-hidden="true"></i>Pacientes </a>
+    </div>
+    <div class="col-md-8 mx-auto">
+    <div >
+        <div class="card-body">
+            <h3>  Editar paciente</h3><br>
+                            <form action="/pacientes/edit/:{{link.id_paciente}}" method="POST">
+                                <div class="form-group">
+                                    <input text="text" value="{{link.nombrep}}"  class="form-control btn-lg" name="nombre" placeholder="Nombre" required="true"  maxlength="100" autofocus><br>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control btn-lg" value="{{link.no_seguro}}" name="no_seguro" placeholder="Número de seguro" required="true" maxlength="9"><br>
+                                </div>
+                                <div class="form-group">
+                                    <input text="number" class="form-control btn-lg" value="{{link.estatura}}" name="estatura" placeholder="Estatura" required="true"><br>
+                                </div>
+                                <div class="form-group">
+                                    <input text="number" class="form-control btn-lg" value="{{link.peso}}" name="peso" placeholder="Peso" required="true"><br>
+                                </div>
+                                <div class="form-group">
+                                    <input text="number" class="form-control btn-lg" value="{{link.edad}}" name="edad" placeholder="Edad" required="true"><br>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input text="number" class="form-control btn-lg" value="{{link.genero}}" name="genero" placeholder="Género" required="true"><br>
+                                </div>
+                                <div class="form-group">
+                                    <input text="text" class="form-control btn-lg" value="{{link.tipo_sangre}}" name="tipo_sangre" placeholder="Tipo de sangre" required="true" maxlength="2"><br>
+                                </div>
+                                <div class="form-group">
+                                    <input text="date" type="date" class="form-control btn-lg" value="{{link.fecha_nacimiento}}" name="fecha_nacimiento" placeholder="Fecha de nacimiento" required="true"><br>
+                                </div>
+                                <div class="form-group">
+                                    <input text="text" class="form-control btn-lg" value="{{link.alergias}}" name="alergias" placeholder="Alegias" required="true" maxlength="255"><br>
+                                </div>
+
+                                <div class="form-group">
+                                    <textarea class="form-control rounded-0" value="{{link.padecimientos}}" name="padecimientos" placeholder="Padecimientos" rows="3" maxlength="255"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input text="text" class="form-control btn-lg" value="{{link.no_contacto}}" name="no_contacto" placeholder="Número de contacto (348-123-4567)" required="true" maxlength="12"><br>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-success btn-block btn-lg"> <i class="fa fa-floppy-o" aria-hidden="true"></i>  Guardar paciente</button>
+                                </div>
+                    </form>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
